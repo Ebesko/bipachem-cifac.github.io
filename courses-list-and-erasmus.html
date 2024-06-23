@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BiPaChem - CIFAC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    
+</script>
+
+<body>
+
+    <div class="content">
+
+        <header>
+            <a href="index.html"><img src="Logo - BiPaChem.png" alt="Logo"></a>
+        </header>
+
+        <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
+
+        <nav>
+            <p><a href="index.html">ACCUEIL</a></p>
+            <p><a href="about.html">A PROPOS DU CURSUS</a></p>
+            <p><a href="guide.html">GUIDES</a></p>
+            <p><a href="courses-list-and-erasmus.html">APP ERASMUS</a></p>
+            <p><a href="contact.html">CONTACT</a></p>
+        </nav>
+
+        <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
+        <main>
+            <div class="text-main" style="width: 100%;">
+                <h2>Application pour la fiche Erasmus</h2>
+                <p>
+                    Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
+                    Cette bourse est disponible à partir de la Licence 2. Vous pouvez également utiliser cet outil pour visualiser quels cours prendre ce semestre.
+                    A noter que certains cours sont à choisir parmi une sélection (signalé dans la colonne "Notes").
+                    Pour des raisons de sécurité, les données ne sont pas stockées et tous les champs sont réinitialisés si vous quittez le site.<br><br>
+                    Pour des raisons d'heures de travail, le site est bien moche voire inutilisable sur téléphone :D
+                </p>
+                <div class="semester">
+                    <input type="checkbox" id="all" name="all" value="all">
+                    <label for="all"> Tout montrer </label><br>
+                    <input type="checkbox" id="semestre1" name="semestre1" value="1">
+                    <label for="semestre1"> Semestre 1 </label><br>
+                    <input type="checkbox" id="semestre2" name="semestre2" value="2">
+                    <label for="semestre2"> Semestre 2 </label><br>
+                    <input type="checkbox" id="semestre3" name="semestre3" value="3">
+                    <label for="semestre3"> Semestre 3 </label><br>
+                </div>
+                <p>A la fin du semestre 3, retour en France pour la suite des études. </p>
+
+                <div class="courses">
+                    <div class="box">Numéro de module </div>
+                    <div class="box">Nom de module</div>
+                    <div class="box">ECTS</div>
+                    <div class="box">Semestre</div>
+                    <div class="box">Notes</div>
+                </div>
+                <hr style="height:3px">
+
+                <div class="courses" id="0">
+                    <div class="box">21000</div>
+                    <div class="box">Vorkurse und Einführungsveranstaltungen für Erstsemester</div>
+                    <div class="box">0</div>
+                    <div class="box">0</div>
+                    <div class="box">Facultatif - Fortement Recommandé</div>
+                </div>
+
+                <div class="courses" id="1">
+                    <div class="box">21-M4</div>
+                    <div class="box">Allgemeine Chemie - Theorie</div>
+                    <div class="box">5</div>
+                    <div class="box">1</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M5</div>
+                    <div class="box">Allgemeine Chemie - Praxis</div>
+                    <div class="box">5</div>
+                    <div class="box">1</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M6</div>
+                    <div class="box">Anorganische Chemie - Basis Theorie</div>
+                    <div class="box">5</div>
+                    <div class="box">1 et 2</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M7</div>
+                    <div class="box">Anorganische Chemie - Basis Praxis</div>
+                    <div class="box">5</div>
+                    <div class="box">1 et 2</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M8</div>
+                    <div class="box">Physikalische Chemie - Basis Theorie</div>
+                    <div class="box">5</div>
+                    <div class="box">1</div>
+                    <div class="box">-</div>
+
+                    <div class="box1">28-P-NF-A</div>
+                    <div class="box1">Physik fuer Nebenfaechler (mit Grundpraktikum)</div>
+                    <div class="box1">10</div>
+                    <div class="box1">1 et 2</div>
+                    <div class="box1">Choisir l'un des deux cours de Physik 
+                    <details>
+                      <summary>Semestre 2</summary>
+                      <p>Pour le deuxième semestre, plutôt qu’un Klausur (partiel), vous passez 6 TP en laboratoire.</p>
+                    </details></div>
+                    
+
+                    <div class="box1">28-P-NF-B</div>
+                    <div class="box1">Physik fuer Nebenfaechler</div>
+                    <div class="box1">10</div>
+                    <div class="box1">1 et 2</div>
+                    <div class="box1">
+                        Choisir l'un des deux cours de Physik
+                        <details>
+                      <summary>Semestre 2</summary>
+                      <p>Les deux semestres se passent de la manière : 2 semestres avec Vorlesung et Übung avec à chaque fin de semestre un Klausur.</p>
+                    </details>
+                    </div>
+
+                    <div class="box2">21-M3</div>
+                    <div class="box2">Mathematik</div>
+                    <div class="box2">10</div>
+                    <div class="box2">1 et 2</div>
+                    <div class="box2">
+                        Choisir l'un des deux cours de Mathe
+                    </div>
+
+                    <div class="box2">21-M-CHM</div>
+                    <div class="box2">Mathematik fuer Chemie</div>
+                    <div class="box2">10</div>
+                    <div class="box2">1 et 2</div>
+                    <div class="box2">Choisir l'un des deux cours de Mathe
+                        <br>Plus exigeant, prépare mieux à la suite
+                    </div>
+                </div>
+                <hr id="1">
+
+                <div class="courses" id="2">
+                    <div class="box3">(SUITE) 21-M6</div>
+                    <div class="box3">(SUITE) Anorganische Chemie - Basis Theorie</div>
+                    <div class="box3">5</div>
+                    <div class="box3">1 et 2</div>
+                    <div class="box3">Suite du cours du 1er semestre <br></div>
+
+                    <div class="box3">(SUITE) 21-M7</div>
+                    <div class="box3">(SUITE) Anorganische Chemie - Basis Praxis</div>
+                    <div class="box3">5</div>
+                    <div class="box3">1 et 2</div>
+                    <div class="box3">Suite du cours du 1er semestre</div>
+
+                    <div class="box3">-</div>
+                    <div class="box3">(SUITE) Physik selon votre choix</div>
+                    <div class="box3">10</div>
+                    <div class="box3">1 et 2</div>
+                    <div class="box3">Suite du cours choisi au 1er semestre</div>
+
+                    <div class="box3">(SUITE)</div>
+                    <div class="box3">(SUITE) Mathe selon votre choix</div>
+                    <div class="box3">10</div>
+                    <div class="box3">1 et 2</div>
+                    <div class="box3">Suite du cours choisi au 1er semestre</div>
+
+                    <div class="box">21-M9</div>
+                    <div class="box">Physikalische Chemie - Basis Praxis</div>
+                    <div class="box">5</div>
+                    <div class="box">2</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M10</div>
+                    <div class="box">Organische Chemie - Basis Theorie</div>
+                    <div class="box">5</div>
+                    <div class="box">2</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M11</div>
+                    <div class="box">Organische Chemie - Basis Praxis</div>
+                    <div class="box">5</div>
+                    <div class="box">2</div>
+                    <div class="box">-</div>
+                </div>
+                <hr id="2">
+
+                <div class="courses" id="3">
+                    <div class="box">21-M12</div>
+                    <div class="box">Organische Chemie - Vertiefung, Theorie</div>
+                    <div class="box">10</div>
+                    <div class="box">3</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M13</div>
+                    <div class="box">Organische Chemie - Vertiefung, Praxis (10 LP)</div>
+                    <div class="box">10</div>
+                    <div class="box">3</div>
+                    <div class="box">-</div>
+
+                    <div class="box">21-M16</div>
+                    <div class="box">Physikalische Chemie - Vertiefung, Theorie</div>
+                    <div class="box">10</div>
+                    <div class="box">3</div>
+                    <div class="box">-</div>
+                </div>
+                <hr id="3">
+
+            </div>
+            <aside style="display: none; width: 30%;">
+                <h2>News</h2>
+                <hr>
+                <p>
+                    Maquette du site crée!
+                </p>
+            </aside>
+        </main>
+        <footer>
+            <a href="https://uni-bielefeld.de/"><img src="https://bipagcifah.files.wordpress.com/2022/03/uni-bielefeld-logo.jpg?w=768" alt=""></a>
+            <a href="https://www.dfh-ufa.org/fr/"><img src="https://bipagcifah.files.wordpress.com/2022/03/logo_ufa-dfh_rgb_usage_externe-2009.jpg?w=417" alt=""></a>
+            <a href="https://u-paris.fr/"><img src="https://bipagcifah.files.wordpress.com/2022/03/universitepariscite_logo_horizontal_couleur_cmjn.jpg?w=423" alt=""></a>
+        </footer>
+    </div>
+</body>
+
+</html>
