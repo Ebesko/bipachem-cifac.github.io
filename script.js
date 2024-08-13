@@ -1,5 +1,5 @@
 async function start() {
-    // Fetch courses data from JSON file
+    // Fetch data from JSON file
     const response_news = await fetch("news.json");
     const news = await response_news.json();
 
