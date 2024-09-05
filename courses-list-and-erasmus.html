@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr">
 
 <head>
@@ -10,11 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
-
-<script>
-
-</script>
 
 <body>
 
@@ -37,352 +33,117 @@
         <hr style="height:4px;border-width:0;color:rgb(238, 238, 238);background-color:rgb(238, 238, 238)">
         <main>
             <div class="text-main" style="width: 100%;">
+                <div class="to_list">
+                    <a href="courses-list-only.html"><p class="bold">Aller plutôt à la liste >>></p></a>
+                </div>
+                <br><br>
                 <h2>Application pour la fiche Erasmus</h2>
                 <p>
                     Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
-                    Cette bourse est disponible à partir de la Licence 2. Vous pouvez également utiliser cet outil pour visualiser quels cours prendre ce semestre.
-                    A noter que certains cours sont à choisir parmi une sélection (signalé dans la colonne "Notes").
+                    Cette bourse est disponible à partir de la Licence 2. 
+                    Si vous voulez plutôt voir la liste des cours, <a href="courses-list-only.html">référez-vous à cette page.</a>
                     Pour des raisons de sécurité, les données ne sont pas stockées et tous les champs sont réinitialisés si vous quittez le site.<br><br>
                 </p>
                 <p class="bold">Le site est enfin disponible lisiblement sur téléphone! Yay ! :D</p>
                 <p>A la fin du semestre 3, retour en France pour la suite des études. </p>
 
-                <table class="big-table">
-                    <thead>
-                        <tr>
-                            <th>Numéro</th>
-                            <th>Nom</th>
-                            <th>ECTS</th>
-                            <th>Semestre</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>21000</td>
-                        <td>Vorkurse und Einführungsveranstaltungen für Erstsemester</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>Facultatif - Fortement Recommandé</td>
-                    </tr>
+                <h4>Semestre</h4>
 
-                    <tr>
-                        <td>21-M4</td>
-                        <td>Allgemeine Chemie - Theorie</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
+                <label class="container-input">
+                    Semestre 1
+                    <input type="radio" checked="checked" name="semester" value="S1" onclick="show('maths_physic_div')">
+                    <span class="checkmark"></span>
+                </label>
 
-                    <tr>
-                        <td>21-M5</td>
-                        <td>Allgemeine Chemie - Praxis</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
+                <label class="container-input">
+                    Semestre 2
+                    <input type="radio" name="semester" value="S2" onclick="show('maths_physic_div')">
+                    <span class="checkmark"></span>
+                </label>
 
-                    <tr>
-                        <td>21-M6</td>
-                        <td>Anorganische Chemie - Basis Theorie</td>
-                        <td>5</td>
-                        <td>1 et 2</td>
-                        <td>-</td>
-                    </tr>
+                <label class="container-input">
+                    Semestre 3
+                    <input type="radio" name="semester" value="S3" onclick="hide('maths_physic_div')">
+                    <span class="checkmark"></span>
+                </label>
+                <div id="maths_physic_div">
+                    <h4>Cours de Maths: </h4>
+                    <label class="container-input">
+                        21-M3 – Mathematik I für Studierende der Chemie und Biochemie
+                        <input type="radio" checked="checked" name="maths" value="M1">
+                        <span class="checkmark"></span>
+                    </label>
 
-                    <tr>
-                        <td>21-M7</td>
-                        <td>Anorganische Chemie - Basis Praxis</td>
-                        <td>5</td>
-                        <td>1 et 2</td>
-                        <td>-</td>
-                    </tr>
+                    <label class="container-input">
+                        24-M-CHM – Mathematik I für Chemie
+                        <input type="radio" name="maths" value="M2">
+                        <span class="checkmark"></span>
+                    </label>
 
-                    <tr>
-                        <td>21-M8</td>
-                        <td>Physikalische Chemie - Basis Theorie</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
+                    <h4>Cours de Physique: </h4>
+                    <label class="container-input">
+                        28-P-NF-A Physik für Nebenfächler (mit Grundpraktikum)
+                        <input type="radio" checked="checked" name="physic" value="P1">
+                        <span class="checkmark"></span>
+                    </label>
 
-                    <tr class="choice-phy">
-                        <td>28-P-NF-A</td>
-                        <td>Physik fuer Nebenfaechler (mit Grundpraktikum)</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Physik
-                            <details>
-                                <summary>Semestre 2</summary>
-                                <p>Pour le deuxième semestre, plutôt qu’un Klausur (partiel), vous passez 6 TP en laboratoire.</p>
-                            </details>
-                        </td>
-                    </tr>
+                    <label class="container-input">
+                        28-P-NF-B Physik für Nebenfächler
+                        <input type="radio" name="physic" value="P2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <input id="generate" type="button" class="btn success" value="Générer le document pré-rempli" onclick="start()">
 
-                    <tr class="choice-phy">
-                        <td>28-P-NF-B</td>
-                        <td>Physik fuer Nebenfaechler</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Physik
-                            <details>
-                                <summary>Semestre 2</summary>
-                                <p>Les deux semestres se passent de la manière : 2 semestres avec Vorlesung et Übung avec à chaque fin de semestre un Klausur.</p>
-                            </details>
-                        </td>
-                    </tr>
-
-                    <tr class="choice-maths">
-                        <td>21-M3</td>
-                        <td>Mathematik</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Mathe
-                        </td>
-                    </tr>
-
-                    <tr class="choice-maths">
-                        <td>21-M-CHM</td>
-                        <td>Mathematik fuer Chemie</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Mathe
-                            <br>Plus exigeant, prépare mieux à la suite
-                        </td>
-                    </tr>
-                    <tr class="follow-up">
-                        <td>(SUITE) 21-M6</td>
-                        <td>(SUITE) Anorganische Chemie - Basis Theorie</td>
-                        <td>5</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours du 1er semestre <br></td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>(SUITE) 21-M7</td>
-                        <td>(SUITE) Anorganische Chemie - Basis Praxis</td>
-                        <td>5</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours du 1er semestre</td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>-</td>
-                        <td>(SUITE) Physik selon votre choix</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours choisi au 1er semestre</td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>-</td>
-                        <td>(SUITE) Mathe selon votre choix</td>
-                        <td>10</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours choisi au 1er semestre</td>
-                    </tr>
-
-                    <tr>
-                        <td>21-M9</td>
-                        <td>Physikalische Chemie - Basis Praxis</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>21-M10</td>
-                        <td>Organische Chemie - Basis Theorie</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>21-M11</td>
-                        <td>Organische Chemie - Basis Praxis</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>21-M12</td>
-                        <td>Organische Chemie - Vertiefung, Theorie</td>
-                        <td>10</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>21-M13</td>
-                        <td>Organische Chemie - Vertiefung, Praxis</td>
-                        <td>10</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>21-M16</td>
-                        <td>Physikalische Chemie - Vertiefung, Theorie</td>
-                        <td>10</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-                </table>
-
-                <table class="small-table">
-                    <thead>
-                        <tr>
-                            <th>Nom</th>
-                            <th>Semestre</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>Vorkurse und Einführungsveranstaltungen für Erstsemester</td>
-                        <td>0</td>
-                        <td>Facultatif - Fortement Recommandé</td>
-                    </tr>
-
-                    <tr>
-                        <td>Allgemeine Chemie - Theorie</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Allgemeine Chemie - Praxis</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Anorganische Chemie - Basis Theorie</td>
-                        <td>1 et 2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Anorganische Chemie - Basis Praxis</td>
-                        <td>1 et 2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Physikalische Chemie - Basis Theorie</td>
-                        <td>1</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr class="choice-phy">
-                        <td>Physik fuer Nebenfaechler (mit Grundpraktikum)</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Physik
-                            <details>
-                                <summary>Semestre 2</summary>
-                                <p>Pour le deuxième semestre, plutôt qu’un Klausur (partiel), vous passez 6 TP en laboratoire.</p>
-                            </details>
-                        </td>
-                    </tr>
-
-                    <tr class="choice-phy">
-                        <td>Physik fuer Nebenfaechler</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Physik
-                            <details>
-                                <summary>Semestre 2</summary>
-                                <p>Les deux semestres se passent de la manière : 2 semestres avec Vorlesung et Übung avec à chaque fin de semestre un Klausur.</p>
-                            </details>
-                        </td>
-                    </tr>
-
-                    <tr class="choice-maths">
-                        <td>Mathematik</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Mathe
-                        </td>
-                    </tr>
-
-                    <tr class="choice-maths">
-                        <td>Mathematik fuer Chemie</td>
-                        <td>1 et 2</td>
-                        <td>
-                            Choisir l'un des deux cours de Mathe
-                            <br>Plus exigeant, prépare mieux à la suite
-                        </td>
-                    </tr>
-                    <tr class="follow-up">
-                        <td>(SUITE) Anorganische Chemie - Basis Theorie</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours du 1er semestre <br></td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>(SUITE) Anorganische Chemie - Basis Praxis</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours du 1er semestre</td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>(SUITE) Physik selon votre choix</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours choisi au 1er semestre</td>
-                    </tr>
-
-                    <tr class="follow-up">
-                        <td>(SUITE) Mathe selon votre choix</td>
-                        <td>1 et 2</td>
-                        <td>Suite du cours choisi au 1er semestre</td>
-                    </tr>
-
-                    <tr>
-                        <td>Physikalische Chemie - Basis Praxis</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Organische Chemie - Basis Theorie</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Organische Chemie - Basis Praxis</td>
-                        <td>2</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Organische Chemie - Vertiefung, Theorie</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Organische Chemie - Vertiefung, Praxis</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Physikalische Chemie - Vertiefung, Theorie</td>
-                        <td>3</td>
-                        <td>-</td>
-                    </tr>
-                </table>
-                <aside style="display: none; width: 30%;">
-                    <h2>News</h2>
-                    <hr>
-                    <p>
-                        Maquette du site crée!
+                <div id="form-result-id">
+                    <p class="hidden" id="S1M1P1">
+                        <a href="./docs/S1M1P1.pdf" target="blank">
+                            Semestre 1: 21-M3 + 28-P-NF-A
+                        </a>
                     </p>
-                </aside>
+                    <p class="hidden" id="S1M2P1">
+                        <a href="./docs/S1M2P1.pdf" target="blank">
+                            Semestre 1: 24-M-CHM + 28-P-NF-A
+                        </a>
+                    </p>
+                    <p class="hidden" id="S1M1P2">
+                        <a href="./docs/S1M1P2.pdf" target="blank">
+                            Semestre 1: 21-M3 + 28-P-NF-B
+                        </a>
+                    </p>
+                    <p class="hidden" id="S1M2P2">
+                        <a href="./docs/S1M2P2.pdf" target="blank">
+                            Semestre 1: 24-M-CHM + 28-P-NF-B
+                        </a>
+                    </p>
+
+                    <p class="hidden" id="S2M1P1">S2 M1 P1</p>
+                    <p class="hidden" id="S2M2P1">S2 M2 P1</p>
+                    <p class="hidden" id="S2M1P2">S2 M1 P2</p>
+                    <p class="hidden" id="S2M2P2">S2 M2 P2</p>
+
+                    <p class="hidden" id="S3">
+                        <a href="./docs/S3.pdf" target="blank"></a>
+                        Semestre 3
+                    </p>
+
+                    <p class="hidden" id="warn">
+                        N'oubliez pas de remplir (SUR LES DEUX PAGES):<br>
+                        <input type="checkbox" name="nom_prenom"> <label for="nom_prenom">Prénom et Nom</label><br>
+                        <input type="checkbox" name="semestre"> <label for="semestre">Semestre concerné</label><br>
+                        <input type="checkbox" name="langue"> <label for="langue">Niveau de langue à l'arrivée</label><br>
+                        <input type="checkbox" name="dater"> <label for="dater">Dater et signer</label><br>
+                        <input type="checkbox" name="Noémie"> <label for="Noémie">Envoyer à Noémie Luce pour signatures</label><br>
+                    </p>
+                </div>
+            </div>
+            <aside class="hidden" width: 30%;">
+                <h2>News</h2>
+                <hr>
+                <p>
+                    Maquette du site crée!
+                </p>
+            </aside>
         </main>
         <footer>
             <a href="https://uni-bielefeld.de/"><img src="https://bipagcifah.files.wordpress.com/2022/03/uni-bielefeld-logo.jpg?w=768" alt=""></a>
