@@ -66,14 +66,14 @@ function show(id) {
     document.getElementById(id).style.display = 'block';
 }
 
-function news_and_list() {
+async function news_and_list() {
 
     // Clean before use
     document.getElementById("news_loaded_id").innerHTML = "";
 
     // Fetch courses data from JSON files
-    const response_news = fetch("news.json");
-    const news = response_news.json();
+    const response_news = await fetch("news.json");
+    const news = await response_news.json();
 
     // Function to create and append course elements
     function appendNews(news_to_add, containerClass) {
