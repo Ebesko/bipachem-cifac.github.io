@@ -39,11 +39,6 @@ async function start() {
     hide("S1M1P2")
     hide("S1M2P2")
 
-    hide("S2M1P1")
-    hide("S2M2P1")
-    hide("S2M1P2")
-    hide("S2M2P2")
-
     hide("S3")
     hide("warn")
 
@@ -70,3 +65,37 @@ function hide(id) {
 function show(id) {
     document.getElementById(id).style.display = 'block';
 }
+
+function news_and_list() {
+
+    // Clean before use
+    document.getElementById("news_loaded_id").innerHTML = "";
+
+    // Fetch courses data from JSON files
+    const response_news = fetch("news.json");
+    const news = response_news.json();
+
+    // Function to create and append course elements
+    function appendNews(news_to_add, containerClass) {
+        var dateElement = document.createElement("p");
+        dateElement.innerText = news_to_add.date;
+        var newsTxtElement = document.createElement("p");
+        newsTxtElement.innerText = news_to_add.txt;
+        var newsTxt2Element = document.createElement("p");
+        newsTxt2Element.innerText = news_to_add.txt2;
+        var newsTxt3Element = document.createElement("p");
+        newsTxt3Element.innerText = news_to_add.txt3;
+
+        var divmodulen = document.querySelector(containerClass);
+        divmodulen.appendChild(dateElement);
+        divmodulen.appendChild(newsTxtElement);
+        divmodulen.appendChild(newsTxt2Element);
+        divmodulen.appendChild(newsTxt3Element);
+    }
+        for (let news_in_list of news) {
+            appendNews(news_in_list, ".news_loaded");
+        }
+
+    document.getElementById("news_loaded_id").style.display = 'block';
+
+   }

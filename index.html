@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr">
 
 <head>
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="news_and_list()">
 
     <div class="content">
 
@@ -38,15 +37,14 @@
                 </p>
             </div>
             <aside>
-                <h2>Checklist du moment</h2>
-                <hr>
+                <h2 class="hidden">Checklist du moment</h2>
+                <hr class="hidden">
                 <div class="chklist_actual"></div>
                 <h2>News</h2>
                 <hr>
-                <p>
-                    Site du cursus en ligne!
-                </p>
-                <div class="news"></div>
+                <div class="news_loaded" id="news_loaded_id">
+                    <p>Site du cursus en ligne!</p>
+                </div>
             </aside>
         </main>
         <footer>

@@ -41,6 +41,8 @@
                 <p>
                     Cette application web a pour but de vous aider à remplir votre feuille Erasmus+ qui permet l'obtention de la bourse Erasmus+.
                     Cette bourse est disponible à partir de la Licence 2. 
+                    Il est cependant nécessaire pour des raisons administratives (pour faire reconnaître vos cours auprès de l'université de Paris Cité)
+                    de remplir un dossier de mobilité une fois par an.
                     Si vous voulez plutôt voir la liste des cours, <a href="courses-list-only.html">référez-vous à cette page.</a>
                     Pour des raisons de sécurité, les données ne sont pas stockées et tous les champs sont réinitialisés si vous quittez le site.<br><br>
                 </p>
@@ -50,22 +52,17 @@
                 <h4>Semestre</h4>
 
                 <label class="container-input">
-                    Semestre 1
+                    Licence 1 (une page = un semestre)
                     <input type="radio" checked="checked" name="semester" value="S1" onclick="show('maths_physic_div')">
                     <span class="checkmark"></span>
                 </label>
 
                 <label class="container-input">
-                    Semestre 2
-                    <input type="radio" name="semester" value="S2" onclick="show('maths_physic_div')">
-                    <span class="checkmark"></span>
-                </label>
-
-                <label class="container-input">
-                    Semestre 3
+                    Licence 2 (uniquement 3ème semestre = 1 seule page)
                     <input type="radio" name="semester" value="S3" onclick="hide('maths_physic_div')">
                     <span class="checkmark"></span>
                 </label>
+
                 <div id="maths_physic_div">
                     <h4>Cours de Maths: </h4>
                     <label class="container-input">
@@ -98,33 +95,28 @@
                 <div id="form-result-id">
                     <p class="hidden" id="S1M1P1">
                         <a href="./docs/S1M1P1.pdf" target="blank">
-                            Semestre 1: 21-M3 + 28-P-NF-A
+                            Licence 1: 21-M3 + 28-P-NF-A
                         </a>
                     </p>
                     <p class="hidden" id="S1M2P1">
                         <a href="./docs/S1M2P1.pdf" target="blank">
-                            Semestre 1: 24-M-CHM + 28-P-NF-A
+                            Licence 1: 24-M-CHM + 28-P-NF-A
                         </a>
                     </p>
                     <p class="hidden" id="S1M1P2">
                         <a href="./docs/S1M1P2.pdf" target="blank">
-                            Semestre 1: 21-M3 + 28-P-NF-B
+                            Licence 1: 21-M3 + 28-P-NF-B
                         </a>
                     </p>
                     <p class="hidden" id="S1M2P2">
                         <a href="./docs/S1M2P2.pdf" target="blank">
-                            Semestre 1: 24-M-CHM + 28-P-NF-B
+                            Licence 1: 24-M-CHM + 28-P-NF-B
                         </a>
                     </p>
 
-                    <p class="hidden" id="S2M1P1">S2 M1 P1</p>
-                    <p class="hidden" id="S2M2P1">S2 M2 P1</p>
-                    <p class="hidden" id="S2M1P2">S2 M1 P2</p>
-                    <p class="hidden" id="S2M2P2">S2 M2 P2</p>
-
                     <p class="hidden" id="S3">
-                        <a href="./docs/S3.pdf" target="blank"></a>
-                        Semestre 3
+                        <a href="./docs/S3.pdf" target="blank">
+                        Licence 2: Semestre 3</a>
                     </p>
 
                     <p class="hidden" id="warn">
@@ -137,11 +129,11 @@
                     </p>
                 </div>
             </div>
-            <aside class="hidden" width: 30%;">
+            <aside class="hidden" width: 30%;>
                 <h2>News</h2>
                 <hr>
                 <p>
-                    Maquette du site crée!
+                    ---
                 </p>
             </aside>
         </main>
